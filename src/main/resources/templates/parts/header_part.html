@@ -13,6 +13,9 @@
 			<a class="header-link" href="/user/index">ユーザ一覧</a>
 		</div>
 	</div>
+	<div class="link-backimg header-title" sec:authorize="hasRole('ROLE_ADMIN')">
+		<a class="header-link" href="/admin">管理者</a>
+	</div>
 	<div class="signin-backimg header-title">
 		<form name="logoutform" action="#" th:action="@{/logout}" method="post">
 			<a class="header-link" href="#" onclick="logout()">sign out</a>
